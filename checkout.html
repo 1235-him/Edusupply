@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EduNation Hub | Checkout</title>
+  <link rel="stylesheet" href="checkout.css" />
+</head>
+<body>
+  <div class="loader" id="loader">
+    <div class="spinner"></div>
+  </div>
+    <header class="nav-header">
+        <h1>Edusupply</h1>
+        <nav>
+          <a href="index.html">Landing</a>
+          <a href="body.html">Home</a>
+          <a href="about.html" class="active">About</a>
+          <a href="product.html">Product</a>
+          <a href="cart.html">Cart</a>
+          <a href="checkout.html">Checkout</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </header>
+
+  <main class="checkout-container">
+    <h2>Checkout</h2>
+    <p>Thank you for choosing Edusupply. Please make your payment to the account below:</p>
+
+    <div class="payment-details">
+      <p><strong>Bank Name:</strong> Opay</p>
+      <p><strong>Account Name:</strong> Edusupply Ltd</p>
+      <p><strong>Account Number:</strong> <span id="account-number">8085239456</span></p>
+    </div>
+
+    <p>After making payment, click the button below to confirm and send your receipt to our WhatsApp number.</p>
+
+    <button onclick="confirmPayment()">Confirm Payment via WhatsApp</button>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-links">
+        <h3>Pages</h3>
+        <ul>
+          <li><a href="index.html">Landing</a></li>
+          <li><a href="body.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="product.html">Product</a></li>
+          <li><a href="details.html">Details</a></li>
+          <li><a href="cart.html">Cart</a></li>
+          <li><a href="checkout.html">Checkout</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-social">
+        <h3>Connect with Us</h3>
+        <ul>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">WhatsApp</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer-bottom">© 2025 EduSupply. All Rights Reserved.</p>
+  </footer>
+
+  <script src="checkout.js">
+  </script>
+</body>
+</html>

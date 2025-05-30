@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EduNation Hub | Contact Us</title>
+  <link rel="stylesheet" href="contact.css" />
+</head>
+<body>
+    <header class="nav-header">
+        <h1>Edusupply</h1>
+        <nav>
+          <a href="index.html">Landing</a>
+          <a href="body.html">Home</a>
+          <a href="about.html" class="active">About</a>
+          <a href="product.html">Product</a>
+          <a href="cart.html">Cart</a>
+          <a href="checkout.html">Checkout</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </header>
+
+  <main class="contact-container">
+    <h2>Contact Us</h2>
+    <p>Have questions or feedback?,feel free to tell us We'd love to hear from you!</p>
+
+    <form action="https://usebasin.com/f/744c63cec5a1" method="post" enctype="multipart/form-data" class="contact-form">
+      <input type="text" name="name" placeholder="Your Full Name" required />
+      <input type="email" name="email" placeholder="Your Email Address" required />
+      <input type="text" name="subject" placeholder="Subject" required />
+      <textarea name="message" rows="5" placeholder="Your Message..." required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-links">
+        <h3>Pages</h3>
+        <ul>
+          <li><a href="index.html">Landing</a></li>
+          <li><a href="body.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="product.html">Product</a></li>
+          <li><a href="cart.html">Cart</a></li>
+          <li><a href="checkout.html">Checkout</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-social">
+        <h3>Connect with Us</h3>
+        <ul>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">WhatsApp</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer-bottom">© 2025 EduSupply. All Rights Reserved.</p>
+  </footer>
+
+  <!-- <script>
+    emailjs.init("CR0SEY2WWHhDZaI73");
+
+    document.getElementById("contact-form").addEventListener("submit", function (e) {
+      e.preventDefault();
+      emailjs.sendForm("service_ioqwgqr", "template_am2ye5y", this)
+        .then(() => {
+          alert("Message sent successfully!");
+          this.reset();
+        }, (err) => {
+          alert("Failed to send message.\n" + JSON.stringify(err));
+        });
+    });
+  </script> -->
+</body>
+</html> 
