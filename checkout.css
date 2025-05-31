@@ -191,13 +191,9 @@ footer {
 @media (max-width: 768px) {
   nav {
     flex-wrap: wrap;
+    float: none;
     justify-content: center;
     margin-top: 10px;
-  }
-
-  .footer-container {
-    flex-direction: column;
-    align-items: center;
   }
 
   .checkout-container {

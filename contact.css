@@ -160,14 +160,10 @@ footer {
 }
 
 @media (max-width: 768px) {
-  .footer-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
   nav {
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap;
+    float: none;
+    justify-content: center;
     margin-top: 10px;
   }
 

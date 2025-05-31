@@ -32,7 +32,7 @@ const products = [
     price: 8200,
     category: "Wears and bags",
     brand: "LunchBag",
-    image: "img.jpg",
+    image: "img.JPG",
     description: "Trendy design with padded straps for comfort."
   },
   {
@@ -41,7 +41,7 @@ const products = [
     price: 22000,
     category: "Wears and bags",
     brand: "Bentgo",
-    image: "bn.jpg",
+    image: "bn.JPG",
     description: "Trendy design with padded straps for comfort made in Crotia."
   },
   {
@@ -50,7 +50,7 @@ const products = [
     price: 12000,
     category: "Wears and bags",
     brand: "HIM'S",
-    image: "ins.jpg",
+    image: "ins.JPG",
     description: "Grey insulated lunch bag with adjustable shoulder strap."
   },
   {
@@ -59,7 +59,7 @@ const products = [
     price: 8500,
     category: "Kids",
     brand: "Textbooks",
-    image: "wee.jpg",
+    image: "wee.JPG",
     description: "Mathematics textbook for kids to help them have solid foundation."
   },
   {
@@ -68,7 +68,7 @@ const products = [
     price: 9000,
     category: "Kids",
     brand: "Textbooks",
-    image: "ele.jpg",
+    image: "ele.JPG",
     description: "Basic Mathematics textbook for kids is to make kids love maths well."
   },
   {
@@ -77,7 +77,7 @@ const products = [
     price: 6000,
     category: "Teens",
     brand: "Textbooks",
-    image: "gen.jpg",
+    image: "gen.JPG",
     description: "General maths for junior secondary school students. It helps them understand the concept of junior secondary school maths."
   },
   {
@@ -95,7 +95,7 @@ const products = [
     price: 7000,
     category: "Teens",
     brand: "Textbooks",
-    image: "ess.jpg",
+    image: "ess.JPG",
     description: "Essential maths for senior secondary school students. It helps in guiding and understand the concept of senior secondary school maths"
   },
   {
@@ -104,7 +104,7 @@ const products = [
     price: 5500,
     category: "Teens",
     brand: "Textbooks",
-    image: "eng.jpg",
+    image: "eng.JPG",
     description: "New concept English for senior secondary school students. It helps in guiding your teen kid in his/her everday english classes."
   },
   {
@@ -113,7 +113,7 @@ const products = [
     price: 3500,
     category: "Teens",
     brand: "Textbooks",
-    image: "conc.jpg",
+    image: "conc.JPG",
     description: "New concept English for junior secondary school students. It helps them understand the concept of junior secondary school english in class."
   },
   {
@@ -122,7 +122,7 @@ const products = [
     price: 60000,
     category: "Kids",
     brand: "Textbooks",
-    image: "cam.jpg",
+    image: "cam.JPG",
     description: "Cambridge primary english textbook for kids is to make them sound in English."
   },
   {
@@ -131,7 +131,7 @@ const products = [
     price: 4000,
     category: "Teens",
     brand: "Set",
-    image: "oxf.jpg",
+    image: "oxf.JPG",
     description: "Oxford Set of Mathematical Instrument is used in construction. It is used to assist the student in constuction"
   },
   {
@@ -140,7 +140,7 @@ const products = [
     price: 5500,
     category: "Teens",
     brand: "Set",
-    image: "nat.jpg",
+    image: "nat.JPG",
     description: "Nataraj Mathematical Set is used in construction. It is used to assist the student in constuction"
   },
   {
@@ -149,7 +149,7 @@ const products = [
     price: 10000,
     category: "Teens",
     brand: "Set",
-    image: "rot.jpg",
+    image: "rot.JPG",
     description: "Rotring Mathematical and Drawing Set is used in construction. It is used to assist the student in constuction and also for technical drawings"
   },
   {
@@ -158,7 +158,7 @@ const products = [
     price: 4500,
     category: "Teens",
     brand: "Set",
-    image: "uni.jpg",
+    image: "uni.JPG",
     description: "Universe Mathematical Set is used in construction. It is used to assist the student in constuction"
   }
 ];
