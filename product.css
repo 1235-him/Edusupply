@@ -8,18 +8,25 @@ body {
 header {
   background: #228B22;
   color: white;
-  padding: 15px 20px;
+  padding: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  animation: fadeInDown 1s ease forwards;
+}
+
+nav {
+  display: flex;
+  gap: 15px;
+  margin-right: 20px;
 }
 
 nav a {
   color: white;
-  margin-left: 15px;
   text-decoration: none;
   font-weight: bold;
-  transition: 0.3s ease;
+  transition: color 0.3s ease, transform 0.3s;
 }
 
 nav a:hover {
@@ -189,5 +196,14 @@ footer {
     opacity: 0;
   } to {
     opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-wrap: wrap;
+    float: none;
+    justify-content: center;
+    margin-top: 10px;
   }
 }

@@ -211,6 +211,7 @@ footer {
 
 @media (max-width: 768px) {
   nav {
+    flex-wrap: wrap;
     float: none;
     text-align: center;
     margin-top: 10px;

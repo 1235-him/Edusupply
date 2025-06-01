@@ -30,9 +30,7 @@ nav a.active {
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin: 0;
-  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
   background-color: #f4f8fb;
   color: #333;
 }
@@ -165,9 +163,5 @@ footer {
     float: none;
     justify-content: center;
     margin-top: 10px;
-  }
-
-  nav a {
-    margin: 5px 0;
   }
 }
