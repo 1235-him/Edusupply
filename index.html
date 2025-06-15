@@ -1,28 +1,241 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Welcome | The H_I_M's</title>
-  <link rel="stylesheet" href="web.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EduSupply - Empowering Learning</title>
+  <link rel="stylesheet" href="web.css" />
 </head>
-<body class="onboarding-body">
-  <div class="carousel-container">
-    <div class="carousel">
-      <img src="pexels-dhanno-18885576.jpg" class="carousel-image active" alt="Welcome to The H_I_M's">
-      <img src="pexels-ivo-rainha-527110-1290141.jpg" class="carousel-image" alt="Learn from Anywhere">
-      <img src="pexels-max-fischer-5212339.jpg" class="carousel-image" alt="Learn from here">
-       <img src="pexels-pixabay-256455.jpg" class="carousel-image" alt="Learn from our side">
-    </div>
-    <div class="carousel-controls">
-      <button onclick="prevSlide()">❮</button>
-      <button onclick="nextSlide()">❯</button>
-    </div>
-    <div class="onboard-nav">
-      <a href="body.html" class="onboard-btn">Get Started</a>
-    </div>
+<body>
+
+  <div class="loader" id="loader">
+    <div class="spinner"></div>
   </div>
 
-  <script src="script.js"></script>
+  <header>
+    <div class="container">
+      <h1>EduSupply</h1>
+      <nav>
+        <a href="#">Home</a>
+        <a href="about.html">About</a>
+        <a href="#categories">Categories</a>
+        <a href="product.html">Products</a>
+        <a href="cart.html">Cart 🛒</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h2>Empowering Learning at Every Stage</h2>
+      <p>Books, Apps, and Tools to Inspire Lifelong Learning</p>
+      <button onclick="window.location.href='product.html'">Explore Now</button>
+    </div>
+  </section>
+
+  <section id="categories" class="categories">
+    <div class="container">
+      <h2>Shop by Category</h2>
+      <div class="grid">
+        <div class="card">📚 Textbooks</div>
+        <div class="card">🎮 Learning Apps</div>
+        <div class="card">📝 Study Guides</div>
+        <div class="card">👩‍🏫 Teacher Resources</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="products" class="products">
+    <div class="container">
+      <h2>Featured Products</h2>
+      <div class="grid">
+        <div class="product-card">
+          <img src="pexels-kuchbhigautam-240163.jpg" alt="Book 1" />
+          <h3>Algebra Mastery Book</h3>
+          <p>₦25000</p>
+        </div>
+        <div class="product-card">
+          <img src="pexels-marta-wave-6437805.jpg" alt="App" />
+          <h3>LearnWithFun App</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="benefits">
+    <div class="container">
+      <h2>Why Choose Us?</h2>
+      <ul>
+        <li>✔ Curated by Experts</li>
+        <li>✔ Affordable Pricing</li>
+        <li>✔ For All Ages & Levels</li>
+        <li>✔ Instant Digital Access</li>
+      </ul> 
+    </div>
+  </section>
+
+  <section id="testimonials" class="testimonials">
+  <div class="container">
+    <h2>What Our Users Say</h2>
+    <div class="slider-wrapper">
+      <div class="grid slider-track" id="slider">
+        <div class="testimonial">
+          <p>"This foundation helped my child love math again!"</p>
+          <strong>- Amina, Parent</strong>
+        </div>
+        <div class="testimonial">
+          <p>"The textbooks are perfectly aligned with our curriculum."</p>
+          <strong>- Mr. Johnson, Teacher</strong>
+        </div>
+        <div class="testimonial">
+          <p>"Fantastic educational tools for all ages."</p>
+          <strong>- Sofia, Educator</strong>
+        </div>
+        <div class="testimonial">
+          <p>"The textbooks align perfectly with our national curriculum."</p>
+          <strong>- Mr. Peter, Teacher,Abuja</strong>
+        </div>
+        <div class="testimonial">
+          <p>"Thanks to these materials, my son finally enjoys studying science."</p>
+          <strong>- Mrs. Okafor, Parent,Lagos</strong>
+        </div>
+      </div>
+    </div>
+    <div class="dots">
+      <span class="dot active" data-index="0"></span>
+      <span class="dot" data-index="1"></span>
+      <span class="dot" data-index="2"></span>
+      <span class="dot" data-index="3"></span>
+      <span class="dot" data-index="4"></span>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-container">
+    
+    <div class="footer-about">
+      <h3>EduSupply</h3>
+      <p>Your trusted partner in providing quality educational materials and tools to empower learners and educators across Nigeria.</p>
+    </div>
+
+    <div class="footer-contact">
+      <h3>Contact Us</h3>
+      <ul>
+        <li>Email: EduSupply2020@gmail.com</a></li>
+        <li>Phone: +234 808 523 9456</a></li>
+        <li>Address: 28, Alafia Str, Jumoke B/Stop, Orisumbare, Ejigbo, Lagos</li>
+      </ul>
+    </div>
+
+    <div class="footer-links">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="product.html">Products</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-resources">
+      <h3>Resources</h3>
+      <ul>
+        <li><a href="details.html">Book Details</a></li>
+        <li><a href="cart.html">Cart</a></li>
+        <li><a href="checkout.html">Checkout</a></li>
+        <li><a href="#">FAQs</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-social">
+      <h3>Connect</h3>
+      <ul>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">Twitter</a></li>
+        <li><a href="#">WhatsApp</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 EduSupply. All Rights Reserved.</p>
+  </div>
+</footer>
+
+  <script>
+    window.addEventListener('load', () => {
+  const loader = document.getElementById('loader');
+  loader.style.display = 'none';
+
+  document.querySelector('.checkout-container').classList.add('animate-fade-in');
+})
+const dots = document.querySelectorAll('.dot');
+const slider = document.getElementById('slider');
+let currentIndex = 0;
+const total = dots.length;
+
+// Go to slide
+function goToSlide(index) {
+  slider.style.transform = `translateX(-${index * 100}%)`;
+  dots.forEach(dot => dot.classList.remove('active'));
+  dots[index].classList.add('active');
+  currentIndex = index;
+}
+
+// Auto slide
+let slideInterval = setInterval(() => {
+  let nextIndex = (currentIndex + 1) % total;
+  goToSlide(nextIndex);
+}, 4000);
+
+// Dot click
+dots.forEach(dot => {
+  dot.addEventListener('click', () => {
+    clearInterval(slideInterval);
+    goToSlide(parseInt(dot.getAttribute('data-index')));
+    slideInterval = setInterval(() => {
+      let nextIndex = (currentIndex + 1) % total;
+      goToSlide(nextIndex);
+    }, 4000);
+  });
+});
+
+// Swipe support
+let startX = 0;
+let endX = 0;
+
+slider.addEventListener('touchstart', e => {
+  startX = e.touches[0].clientX;
+});
+
+slider.addEventListener('touchmove', e => {
+  endX = e.touches[0].clientX;
+});
+
+slider.addEventListener('touchend', () => {
+  let diffX = endX - startX;
+  if (Math.abs(diffX) > 50) { // swipe threshold
+    clearInterval(slideInterval);
+    if (diffX > 0) {
+      // Swipe right → previous slide
+      let prevIndex = (currentIndex - 1 + total) % total;
+      goToSlide(prevIndex);
+    } else {
+      // Swipe left → next slide
+      let nextIndex = (currentIndex + 1) % total;
+      goToSlide(nextIndex);
+    }
+    slideInterval = setInterval(() => {
+      let nextIndex = (currentIndex + 1) % total;
+      goToSlide(nextIndex);
+    }, 4000);
+  }
+});
+  </script>
 </body>
 </html>

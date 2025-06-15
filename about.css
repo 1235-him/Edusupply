@@ -106,7 +106,7 @@ nav a.active {
 }
 
 .about-hero {
-  background: url('pexels-polina-tankilevitch-6743217.jpg') no-repeat center center/cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('pexels-polina-tankilevitch-6743217.jpg') no-repeat center center/cover;
   color: white;
   text-align: center;
   padding: 100px 20px;
@@ -148,7 +148,7 @@ li {
   background: #228B22;
   color: white;
   text-align: center;
-  padding: 60px 20px;
+  padding: 60px 5px;
 }
 
 .cta-button {
@@ -161,59 +161,6 @@ li {
   margin-top: 20px;
   display: inline-block;
   border-radius: 5px;
-}
-
-.core-values {
-  background: #fdfdfd;
-  padding: 40px 20px;
-  margin-top: 40px;
-  border-radius: 10px;
-}
-
-h3{
-  text-align: center;
-}
-.core-values h3 {
-  font-size: 1.8rem;
-  margin-bottom: 20px;
-  color: #228B22;
-  text-align: center;
-}
-
-#values-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 15px;
-  margin-bottom: 20px;
-}
-
-#values-list button {
-  background: #228B22;
-  color: white;
-  border: none;
-  padding: 12px 24px;
-  border-radius: 6px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-#values-list button:hover {
-  background: #228B22;
-}
-
-.value-panel {
-  background: white;
-  border: 1px solid #ddd;
-  padding: 20px;
-  border-radius: 8px;
-  animation: fadeIn 0.3s ease-in-out;
-}
-
-.value-panel h4 {
-  color: #228B22;
-  margin-bottom: 10px;
 }
 
 .value-panel button {
@@ -232,48 +179,100 @@ h3{
 }
 
 footer {
+  position: relative;
+  top: 50px;
   background-color: #228B22;
-  color: white;
-  padding: 40px 20px 20px;
-  margin-top: 60px;
-  animation: fadeIn 1.2s ease forwards;
+  color: #fff;
+  padding: 50px 20px 30px;
+  font-family: 'Arial', sans-serif;
 }
+
 .footer-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 30px;
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 0 auto;
 }
+
+.footer-about p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #ddd;
+}
+
+.footer-links h3,
+.footer-resources h3,
+.footer-social h3,
+.footer-about h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  border-bottom: 2px solid rgba(255,255,255,0.3);
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
 .footer-links ul,
+.footer-resources ul,
 .footer-social ul {
   list-style: none;
   padding: 0;
 }
-.footer-links h3,
-.footer-social h3 {
-  margin-bottom: 10px;
+
+.footer-links a,
+.footer-resources a,
+.footer-social a {
+  color: #ddd;
+  text-decoration: none;
+  font-size: 14px;
+  display: block;
+  margin-bottom: 6px;
+  transition: color 0.3s ease;
 }
+
+.footer-contact ul,
+.footer-links ul,
+.footer-social ul {
+  list-style: none;
+  padding: 0;
+  font-size: 14px;
+}
+
+.footer-contact li,
+.footer-links li,
+.footer-social li {
+  margin-bottom: 6px;
+}
+
+.footer-contact a,
 .footer-links a,
 .footer-social a {
   color: #ddd;
   text-decoration: none;
-  display: block;
-  margin-bottom: 6px;
-  transition: color 0.3s, transform 0.3s;
+  transition: color 0.3s ease;
 }
+
+.footer-contact a:hover,
 .footer-links a:hover,
 .footer-social a:hover {
   color: #fff;
-  transform: translateX(5px);
   text-decoration: underline;
 }
+
+.footer-links a:hover,
+.footer-resources a:hover,
+.footer-social a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
 .footer-bottom {
   text-align: center;
   padding-top: 20px;
-  font-size: 14px;
-  color: #aaa;
+  font-size: 13px;
+  color: #ccc;
+  border-top: 1px solid rgba(255,255,255,0.2);
+  margin-top: 20px;
 }
 
 @keyframes fadeIn {
