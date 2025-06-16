@@ -1,12 +1,13 @@
-const cartContainer = document.getElementById("cart-container");
+const cartContainer = document.querySelector(".cart-container");
 const totalDisplay = document.getElementById("total");
-const checkoutBtn = document.getElementById("checkout-btn");
+const checkoutBtn = document.querySelector(".checkout-btn");
 
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
+let total;
 
 function renderCart() {
     cartContainer.innerHTML = "";
-    let total = 0;
+     total = 0;
 
     if (cart.length === 0) {
         cartContainer.innerHTML = "<p>Your cart is empty.</p>";
@@ -57,3 +58,19 @@ function removeItem(id) {
 }
 
 renderCart();
+
+checkoutBtn.addEventListener('click', () =>{
+	FlutterwaveCheckout({
+		public_key: 'FLWPUBK_TEST-324ce59f5a410bb3b0d08a77c53db103-X',
+		tx_ref: 'titanic-48981487343MDI0NzMx',
+		amount: total,
+		currency: 'NGN',
+		payment_options: 'card, mobilemoneyghana, ussd',
+		redirect_url: 'https://1235-him.github.io/Edusupply/checkout.html',
+        customer: {
+			email: 'shamsondeen256@gmail.com',
+			phone_number: '08082293334',
+			name: 'Lameed Shamsondeen',
+		}
+	});
+})

@@ -139,38 +139,22 @@ nav a.active {
   border-radius: 10px;
   text-align: center;
 }
-
 .slider-wrapper {
-  overflow: hidden;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  max-width: 100%;
 }
 
-.slider-track {
+.grid-slider-track {
   display: flex;
-  transition: transform 0.5s ease-in-out;
+  gap: 1rem;
+  padding: 1rem;
+  transition: transform 0.3s ease;
 }
-
 .testimonial {
   min-width: 100%;
-  box-sizing: border-box;
-}
-
-.dots {
-  text-align: center;
-  margin-top: 15px;
-}
-
-.dot {
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  background: #ccc;
-  border-radius: 50%;
-  margin: 0 5px;
-  cursor: pointer;
-}
-
-.dot.active {
-  background: #228B22;
+  /* box-sizing: border-box; */
 }
 
 .product-card img {
@@ -187,6 +171,41 @@ nav a.active {
 .benefits li {
   padding: 10px 0;
   font-size: 1.2em;
+}
+
+.faq {
+  padding: 60px 0;
+  background: white;
+}
+
+.faq h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #228B22;
+  font-size: 2em;
+}
+
+.faq .card {
+  background: #f1f1f1;
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.faq .card:hover {
+  background: #e0e0e0;
+  transform: translateY(-5px);
+}
+
+.faq h3 {
+  color: #333;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.faq p {
+  font-size: 0.95em;
+  color: #555;
 }
 
 footer {
@@ -273,6 +292,48 @@ footer {
 .footer-social a:hover {
   color: #fff;
   text-decoration: underline;
+}
+
+.footer-social .social-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.footer-social .social-icons a {
+  color: white;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.footer-social .social-icons a:hover {
+  transform: scale(1.1);
+}
+
+.footer-social .social-icons a[aria-label="Facebook"] {
+  background-color: #1877F2;
+}
+
+.footer-social .social-icons a[aria-label="Instagram"] {
+  background: radial-gradient(circle at 30% 30%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+
+.footer-social .social-icons a[aria-label="Twitter"] {
+  background-color: #1DA1F2;
+}
+
+.footer-social .social-icons a[aria-label="WhatsApp"] {
+  background-color: #25D366;
+}
+
+.footer-social .social-icons i {
+  font-size: 18px;
 }
 
 .footer-bottom {

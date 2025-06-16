@@ -9,7 +9,7 @@ if (product) {
     <p><strong>Brand:</strong> ${product.brand}</p>
     <p><strong>Category:</strong> ${product.category}</p>
     <p>${product.description}</p>
-    <button onclick="addToCart(${product.id})">Add to Cart</button>
+    <button style="background-color:#228B22;  border: none; flex: 1; margin: 0 5px; padding: 8px; border-radius: 5px; color: white; transition: 0.3s;" onclick="addToCart(${product.id})">Add to Cart</button>
   `;
 }
 

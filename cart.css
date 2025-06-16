@@ -1,14 +1,14 @@
-* {
+/* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
+} */
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: #f5f8fa;
   color: #333;
-  padding: 20px;
+  margin: 0 auto;
 }
 
 h1 {
@@ -17,11 +17,11 @@ h1 {
   font-size: 2rem;
 }
 
-#cart-container {
+.cart-container {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  max-width: 1000px;
+  width: 80%;
   margin: auto;
 }
 
@@ -141,115 +141,8 @@ h1 {
   text-decoration: underline;
 }
 
-footer {
-  background-color: #228B22;
-  color: #fff;
-  padding: 50px 20px 30px;
-  font-family: 'Arial', sans-serif;
-}
-
-.footer-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 30px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.footer-about p {
-  font-size: 14px;
-  line-height: 1.6;
-  color: #ddd;
-}
-
-.footer-links h3,
-.footer-resources h3,
-.footer-social h3,
-.footer-about h3 {
-  font-size: 18px;
-  margin-bottom: 10px;
-  border-bottom: 2px solid rgba(255,255,255,0.3);
-  display: inline-block;
-  padding-bottom: 5px;
-}
-
-.footer-links ul,
-.footer-resources ul,
-.footer-social ul {
-  list-style: none;
-  padding: 0;
-}
-
-.footer-links a,
-.footer-resources a,
-.footer-social a {
-  color: #ddd;
-  text-decoration: none;
-  font-size: 14px;
-  display: block;
-  margin-bottom: 6px;
-  transition: color 0.3s ease;
-}
-
-.footer-contact ul,
-.footer-links ul,
-.footer-social ul {
-  list-style: none;
-  padding: 0;
-  font-size: 14px;
-}
-
-.footer-contact li,
-.footer-links li,
-.footer-social li {
-  margin-bottom: 6px;
-}
-
-.footer-contact a,
-.footer-links a,
-.footer-social a {
-  color: #ddd;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.footer-contact a:hover,
-.footer-links a:hover,
-.footer-social a:hover {
-  color: #fff;
-  text-decoration: underline;
-}
-
-.footer-links a:hover,
-.footer-resources a:hover,
-.footer-social a:hover {
-  color: #fff;
-  text-decoration: underline;
-}
-
-.footer-bottom {
-  text-align: center;
-  padding-top: 20px;
-  font-size: 13px;
-  color: #ccc;
-  border-top: 1px solid rgba(255,255,255,0.2);
-  margin-top: 20px;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@media (max-width: 768px) {
+@media all and (max-width: 768px) {
   .cart-item {
-    flex-direction: column;
     text-align: center;
   }
 
@@ -260,9 +153,5 @@ footer {
 
   .qty {
     justify-content: center;
-  }
-
-  #total {
-    text-align: center;
   }
 }
