@@ -61,6 +61,18 @@ nav a:hover {
   animation: fadeInUp 0.8s ease;
 }
 
+ .logo-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  width: 50px;
+  height: auto;
+  object-fit: contain;
+}
+
 .product-card:hover {
   transform: scale(1.05);
 }

@@ -71,6 +71,11 @@ checkoutBtn.addEventListener('click', () =>{
 			email: 'shamsondeen256@gmail.com',
 			phone_number: '08082293334',
 			name: 'Lameed Shamsondeen',
+		},
+        customizations: {
+			title: 'EduSupply',
+			description: 'Payment',
+			logo: 'HIM.JPG',
 		}
 	});
 })

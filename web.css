@@ -43,6 +43,18 @@
   }
 }
 
+.logo-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  width: 50px;
+  height: auto;
+  object-fit: contain;
+}
+
 header {
   background: #228B22;
   color: white;
