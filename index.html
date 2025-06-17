@@ -220,68 +220,6 @@
 
   document.querySelector('.checkout-container').classList.add('animate-fade-in');
 })
-const dots = document.querySelectorAll('.dot');
-const slider = document.getElementById('slider');
-let currentIndex = 0;
-const total = dots.length;
-
-// Go to slide
-function goToSlide(index) {
-  slider.style.transform = `translateX(-${index * 100}%)`;
-  dots.forEach(dot => dot.classList.remove('active'));
-  dots[index].classList.add('active');
-  currentIndex = index;
-}
-
-// Auto slide
-let slideInterval = setInterval(() => {
-  let nextIndex = (currentIndex + 1) % total;
-  goToSlide(nextIndex);
-}, 4000);
-
-// Dot click
-dots.forEach(dot => {
-  dot.addEventListener('click', () => {
-    clearInterval(slideInterval);
-    goToSlide(parseInt(dot.getAttribute('data-index')));
-    slideInterval = setInterval(() => {
-      let nextIndex = (currentIndex + 1) % total;
-      goToSlide(nextIndex);
-    }, 4000);
-  });
-});
-
-// Swipe support
-let startX = 0;
-let endX = 0;
-
-slider.addEventListener('touchstart', e => {
-  startX = e.touches[0].clientX;
-});
-
-slider.addEventListener('touchmove', e => {
-  endX = e.touches[0].clientX;
-});
-
-slider.addEventListener('touchend', () => {
-  let diffX = endX - startX;
-  if (Math.abs(diffX) > 50) { // swipe threshold
-    clearInterval(slideInterval);
-    if (diffX > 0) {
-      // Swipe right → previous slide
-      let prevIndex = (currentIndex - 1 + total) % total;
-      goToSlide(prevIndex);
-    } else {
-      // Swipe left → next slide
-      let nextIndex = (currentIndex + 1) % total;
-      goToSlide(nextIndex);
-    }
-    slideInterval = setInterval(() => {
-      let nextIndex = (currentIndex + 1) % total;
-      goToSlide(nextIndex);
-    }, 4000);
-  }
-});
   </script>
 </body>
 </html>
