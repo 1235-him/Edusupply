@@ -19,7 +19,7 @@ const products = [
   },
   {
     id: 3,
-    title: "Kids Bag with teddybear",
+    title: "Bag with bear",
     price: 15000,
     category: "Kids",
     brand: "Bags",
@@ -55,7 +55,7 @@ const products = [
   },
   {
     id: 7,
-    title: "Maths Textbook for Kids",
+    title: "Kids Maths Textbook",
     price: 8500,
     category: "Kids",
     brand: "Textbooks",
@@ -73,7 +73,7 @@ const products = [
   },
   {
     id: 9,
-    title: "General maths for junior",
+    title: "Junior General maths",
     price: 6000,
     category: "Teens",
     brand: "Textbooks",

@@ -28,17 +28,18 @@ document.querySelector('.download-link').addEventListener('click', (e) => {
     jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
   };
   html2pdf().from(element).set(opt).save();
+   
+  const whatsappNumber = "2348085239456"
+  const message = encodeURIComponent(
+        "Please confirm this receipt. I have downloaded and attached it."
+      );
+      window.open(`https://wa.me/${whatsappNumber}?text=${message}`);
 });
 
 // Update total and other info
 document.getElementById("receipt-total").textContent = `NGN ${total.toLocaleString()}`;
 document.getElementById("paid-amount").textContent = `NGN ${total.toLocaleString()}`;
-document.getElementById("transaction-ref").textContent = transactionRef;
 
 function confirmPayment() {
-      const message = encodeURIComponent(
-        "Hello, I just made a payment to Edusupply Ltd. For some books pls confirm. THANK YOU"
-      );
-       const whatsappNumber = "2348085239456";
-      window.open(`https://wa.me/${whatsappNumber}?text=${message}`);
+      
     }

@@ -1,14 +1,14 @@
 body {
-  margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: #f4f4f4;
+  line-height: 1.6;
+  background: #f9f9f9;
   color: #333;
 }
 
 header {
   background: #228B22;
   color: white;
-  padding: 10px;
+  padding: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -16,22 +16,70 @@ header {
   animation: fadeInDown 1s ease forwards;
 }
 
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+header h1 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 20px;
+}
+
+.logo-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  width: 50px;
+  height: auto;
+  object-fit: contain;
+}
+
 nav {
   display: flex;
-  gap: 15px;
-  margin-right: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
 }
 
 nav a {
   color: white;
+  margin: 0 10px;
   text-decoration: none;
   font-weight: bold;
-  transition: color 0.3s ease, transform 0.3s;
+  transition: color 0.3s ease;
 }
 
-nav a:hover {
-  color: #ffd700;
-  transform: scale(1.05);
+nav a:hover,
+nav a.active {
+  color: #FFEB3B;
+}
+
+@media (max-width: 768px) {
+  nav {
+    width: 100%;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  header h1 {
+    margin-left: 0;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 10px;
+  }
 }
 
 .search-bar {
@@ -301,9 +349,8 @@ footer {
 
 @media (max-width: 768px) {
   nav {
-    flex-wrap: wrap;
     float: none;
-    justify-content: center;
+    text-align: center;
     margin-top: 10px;
   }
 }
