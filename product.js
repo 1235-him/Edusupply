@@ -19,6 +19,14 @@ function displayProducts(filteredProducts) {
   });
 }
 
+document.addEventListener("DOMContentLoaded", function() {
+  const cart = JSON.parse(localStorage.getItem("cart")) || [];
+  
+  if (cart.length > 0) {
+    document.getElementById("cart-link").style.display = "inline-block";
+  }
+});
+
 function addToCart(id) {
   const cart = JSON.parse(localStorage.getItem("cart")) || [];
   const item = products.find(p => p.id === id);
@@ -27,6 +35,7 @@ function addToCart(id) {
   else cart.push({ ...item, quantity: 1 });
   localStorage.setItem("cart", JSON.stringify(cart));
   alert(`${item.title} added to cart`);
+  
 }
 
 function viewDetails(id) {
