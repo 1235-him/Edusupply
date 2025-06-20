@@ -66,13 +66,28 @@ checkoutBtn.addEventListener('click', () =>{
 		amount: total,
 		currency: 'NGN',
 		payment_options: 'card, mobilemoneyghana, ussd',
-		redirect_url: 'https://1235-him.github.io/Edusupply/checkout.html',
+		redirect_url: 'https://1235-him.github.io/Edusupply/receipt.html',
         customer: {
 			email: 'shamsondeen256@gmail.com',
 			phone_number: '08082293334',
 			name: 'Lameed Shamsondeen',
 		},
-        customizations: {
+callback: function (response) {
+const cart = JSON.parse(localStorage.getItem("cart")) || [];
+const receipt = {
+      txRef: response.tx_ref,                  
+      paymentType: response.payment_type,      
+      amount: response.amount,                  
+      cartItems: cart                          
+    };
+
+    localStorage.setItem("receipt", JSON.stringify(receipt));
+    localStorage.removeItem("cart");
+},
+onclose: function() {
+    alert("Payment cancelled");
+  },
+customizations: {
 			title: 'EduSupply',
 			description: 'Payment',
 			logo: 'HIM.JPG',
