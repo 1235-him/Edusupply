@@ -72,22 +72,7 @@ checkoutBtn.addEventListener('click', () =>{
 			phone_number: '08082293334',
 			name: 'Lameed Shamsondeen',
 		},
-callback: function (response) {
-const cart = JSON.parse(localStorage.getItem("cart")) || [];
-const receipt = {
-      txRef: response.tx_ref,                  
-      paymentType: response.payment_type,      
-      amount: response.amount,                  
-      cartItems: cart                          
-    };
-
-    localStorage.setItem("receipt", JSON.stringify(receipt));
-    localStorage.removeItem("cart");
-},
-onclose: function() {
-    alert("Payment cancelled");
-  },
-customizations: {
+        customizations: {
 			title: 'EduSupply',
 			description: 'Payment',
 			logo: 'HIM.JPG',

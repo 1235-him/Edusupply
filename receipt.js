@@ -1,31 +1,21 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const receipt = JSON.parse(localStorage.getItem("receipt")) || {};
+// Fetch cart data from localStorage
+const cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-  // Update fields
-  document.getElementById("receipt-amount").textContent = `NGN ${Number(receipt.amount || 0).toLocaleString()}`;
-  document.getElementById("amount-paid").textContent = `NGN ${Number(receipt.amount || 0).toLocaleString()}`;
-  document.getElementById("payment-method").textContent = receipt.paymentType || "-";
-  document.getElementById("tx-ref").textContent = receipt.txRef || "-";
+// Generate a random transaction reference (you can replace this with real one)
+const transactionRef = "TXN" + Date.now();
 
-  const itemsList = document.getElementById("items-list");
-  if (receipt.cartItems && receipt.cartItems.length > 0) {
-    receipt.cartItems.forEach(item => {
-      const li = document.createElement("li");
-      const itemTotal = item.price * item.quantity;
-      li.textContent = `${item.title} (x${item.quantity}) - NGN ${itemTotal.toLocaleString()}`;
-      itemsList.appendChild(li);
-    });
-  } else {
-    itemsList.innerHTML = "<li>No items found</li>";
-  }
+let total = 0;
+const itemsList = document.getElementById("items-list");
 
-  const date = new Date();
-  document.getElementById("date").textContent = date.toDateString();
+// Render purchased items
+cart.forEach(item => {
+  const itemTotal = item.price * item.quantity;
+  total += itemTotal;
+
+  const li = document.createElement("li");
+  li.textContent = `${item.title} (x${item.quantity}) - NGN ${itemTotal.toLocaleString()}`;
+  itemsList.appendChild(li);
 });
-
-const date = new Date();
-const options = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' };
-document.getElementById("date").textContent = date.toLocaleDateString('en-US', options);
 
 document.querySelector('.download-link').addEventListener('click', (e) => {
   e.preventDefault();
@@ -39,3 +29,16 @@ document.querySelector('.download-link').addEventListener('click', (e) => {
   };
   html2pdf().from(element).set(opt).save();
 });
+
+// Update total and other info
+document.getElementById("receipt-total").textContent = `NGN ${total.toLocaleString()}`;
+document.getElementById("paid-amount").textContent = `NGN ${total.toLocaleString()}`;
+document.getElementById("transaction-ref").textContent = transactionRef;
+
+function confirmPayment() {
+      const message = encodeURIComponent(
+        "Hello, I just made a payment to Edusupply Ltd. For some books pls confirm. THANK YOU"
+      );
+       const whatsappNumber = "2348085239456";
+      window.open(`https://wa.me/${whatsappNumber}?text=${message}`);
+    }
