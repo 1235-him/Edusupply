@@ -19,7 +19,7 @@ const products = [
   },
   {
     id: 3,
-    title: "Bag with bear",
+    title: "Bag with Teddy",
     price: 15000,
     category: "Kids",
     brand: "Bags",

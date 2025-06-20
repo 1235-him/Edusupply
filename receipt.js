@@ -39,7 +39,3 @@ document.querySelector('.download-link').addEventListener('click', (e) => {
 // Update total and other info
 document.getElementById("receipt-total").textContent = `NGN ${total.toLocaleString()}`;
 document.getElementById("paid-amount").textContent = `NGN ${total.toLocaleString()}`;
-
-function confirmPayment() {
-      
-    }
