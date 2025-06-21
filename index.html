@@ -216,22 +216,6 @@
 
   document.querySelector('.checkout-container').classList.add('animate-fade-in');
 })
-const slider = document.getElementById("slider");
-let index = 0;
-const items = slider.children;
-const totalItems = items.length;
-
-function autoSlide() {
-  index++;
-  if (index >= totalItems) index = 0;
-  slider.style.transform = `translateX(-${index * (items[0].offsetWidth + 20)}px)`;
-}
-
-let sliderInterval = setInterval(autoSlide, 3000);
-
-slider.addEventListener("touchstart", () => {
-  clearInterval(sliderInterval);
-});
-  </script>
+</script>
 </body>
 </html>

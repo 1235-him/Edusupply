@@ -155,58 +155,22 @@ nav a.active {
   border-radius: 10px;
   text-align: center;
 }
-
-.testimonials {
-  background: #f9f9f9;
-  padding: 50px 20px;
-}
-
-.testimonials h2 {
-  text-align: center;
-  font-size: 2em;
-  color: #228B22;
-  margin-bottom: 20px;
-}
-
 .slider-wrapper {
-  overflow: hidden;
-  position: relative;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  max-width: 100%;
 }
 
 .grid-slider-track {
   display: flex;
-  gap: 20px;
-  transition: transform 0.5s ease;
+  gap: 1rem;
+  padding: 1rem;
+  transition: transform 0.3s ease;
 }
-
 .testimonial {
-  min-width: 300px;
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  flex-shrink: 0;
-}
-
-.testimonial p {
-  font-style: italic;
-  margin-bottom: 10px;
-}
-
-.testimonial strong {
-  color: #555;
-  font-size: 0.9em;
-}
-
-@media (max-width: 768px) {
-  .grid-slider-track {
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-  }
-
-  .testimonial {
-    scroll-snap-align: start;
-  }
+  min-width: 100%;
+  /* box-sizing: border-box; */
 }
 
 .product-card img {
